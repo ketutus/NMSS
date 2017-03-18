@@ -1,0 +1,248 @@
+
+@import url('https://fonts.googleapis.com/css?family=IM+Fell+DW+Pica');
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700');
+
+body {
+    font-family: 'Source Sans Pro', sans-serif;
+    color: #fff;
+    color: rgba(255,255,255,0.8);
+    padding: 30px;
+    background: #000 url(../img/nmss-bg.jpg) repeat-y fixed;
+    background-size: cover;
+    font-size: 14px;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;    
+}
+input, button, div, textarea {
+    outline-style:none; 
+}
+
+p:empty {
+    display: none;
+}
+header {
+    margin-bottom: 30px;
+}
+header h1 {
+    margin: 0;
+    font-family: 'IM Fell DW Pica', serif;   
+    font-size: 46px;
+}
+header h1:before {
+    content: "";
+    background: rgba(255,255,255,0.7) url(../img/nmss-logo2.png) no-repeat;
+    background-size: contain;
+    border-radius: 50%;
+    border: 5px solid rgba(0,0,0,0.7);
+    box-shadow: 0 0 7px 0 rgba(0,0,0,0.6);
+    display: inline-block;
+    height: 48px;
+    width: 48px;
+    margin-right: 10px;
+    vertical-align: middle;
+    position: relative;
+    top: -6px;
+} 
+#slogan {
+    font-style: italic;
+    font-size: 13px;
+    color: rgba(255,255,255,0.3);    
+}
+#templates, .content {
+    display: none;
+}
+.content-container {
+    box-sizing: border-box;
+    padding: 0 0 0 30px;  
+}
+#list.content-container {
+    flex: 2;
+}
+#view.content-container {
+    flex: 6;
+    display: flex;   
+}
+#view .content-area {
+    flex: 1;
+    border: none;
+    padding: 0 30px;
+    border-left: 2px solid rgba(255,255,255,0.1);
+}
+.content.active {
+    display: flex;
+    background: rgba(0,0,0,0.3);
+    padding: 30px 0;
+    box-shadow: 0 0 15px 0 rgba(0,0,0,0.4);
+    border: 1px solid rgba(0,0,0,0.4);
+    border-radius: 5px;
+    border-top-left-radius: 0;
+}
+.edited .title::after {
+    content: "*";
+    color: "red";
+}
+
+#nav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+#nav li {
+    display: inline-block;
+    padding: 10px 15px;
+}
+#nav li a {
+    color: rgba(255,255,255,0.3);
+    text-decoration: none;
+}
+#nav li a:hover {
+    color: #fff;
+} 
+#nav li.active a {
+    color: #fff;
+}
+#nav li.active {
+    background: rgba(0,0,0,0.6);
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+/* News */
+
+.news-item h2 {
+    font-family: 'IM Fell DW Pica', serif;
+    color: rgba(255,255,255,0.8);
+    margin: 0;
+    font-size: 26px;
+    letter-spacing: 0.08em;    
+}
+.news-item .date {
+    font-size: 13px;
+    color: rgba(255,255,255,0.3);    
+}
+.news-item .body,
+.news-item .image  {
+    margin-top: 10px;
+}
+.image img {
+    max-width: 100%;
+    max-height: 300px;
+    box-shadow: 0 0 7px 0 rgba(0,0,0,0.4);     
+}
+.news-item .bold {
+    font-weight: 700;
+    color: #fff;    
+}
+.news-item .italic {
+    font-style: italic;
+}
+.news-list.active,
+.live-list.active {
+    background:  linear-gradient(rgba(255,255,255,0.2), rgba(255,255,255,0.1));
+}
+#news-list, #live-list {
+    box-shadow: 0 0 7px 0 rgba(0,0,0,0.4);   
+}
+#news-list .date, #live-list .date {
+    color: rgba(255,255,255,0.3);
+    display: block;
+}
+.news-list, .live-list {
+    cursor: pointer;
+    padding: 6px 8px;
+    background: rgba(0,0,0,0.3);
+}
+.news-list:first-child, .live-list:first-child {
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+.news-list:last-of-type, .live-list:last-of-type {
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+/* Form */
+textarea#body {
+    width: 100%;
+    height: 300px;
+    box-sizing: border-box;
+}
+
+.news-form > div {
+    margin-bottom: 10px;    
+}
+
+button {
+    background: linear-gradient(#272d11, #202505);
+    border: 1px solid rgba(0,0,0,0.3);
+    border-radius: 5px;
+    color: rgba(255,255,255,0.3);
+    font-size: 14px;
+    box-shadow: 0 0 7px 0 rgba(0,0,0,0.4);
+    padding: 7px 10px;
+    margin: 5px 5px 10px 0;
+}
+button.delete, .rte-buttons button {
+    background: linear-gradient(#321d1a, #2c1918);
+}
+button.active {
+  color: rgba(255,255,255,0.7);  
+}
+button.active:hover {
+    color: #fff;
+    background: #353d15;    
+    cursor: pointer;    
+}
+button.delete:hover, .rte-buttons button:hover {
+    background: #422722;
+}
+
+input[type="text"], textarea {
+    background: linear-gradient(rgba(255,255,255,0.1), rgba(255,255,255,0.2));
+    padding: 5px 7px;
+    color: #fff;
+    border-radius: 5px;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 14px;
+    box-shadow: 0 0 7px 0 rgba(0,0,0,0.4), 0 0 7px 0 rgba(0,0,0,0.2) inset;
+    border: 1px solid rgba(255,255,255,0.1);
+    max-width: 100%;
+    box-sizing: border-box;
+}
+label {
+    padding: 5px 5px 5px 0;
+    display: inline-block;
+}
+label[for="published"] {
+    position: relative;
+    top: -3px;
+}
+
+@media screen and (max-width: 700px) {
+    .content.active, #view.content-container {
+        flex-direction: column;
+    }
+    body {
+        padding: 10px;
+    }
+    .content-container {
+        padding: 0 10px 20px 10px;
+    }
+    #view .content-area {
+        padding: 20px 0;
+        border-left: none;
+        border-top: 2px solid rgba(255,255,255,0.1);        
+    }
+    #nav li {
+        padding: 10px 5px;
+    }    
+}
+@media screen and (min-width: 701px) and (max-width: 1200px) {
+    #view.content-container {
+        flex-direction: column;
+    }
+}
+
+
+
